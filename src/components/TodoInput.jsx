@@ -29,7 +29,7 @@ export default function TodoInput(props) {
   }
 
   function handleAddTodo(e) {
-    if (e?.code !== 'Enter') {
+    if (e.type === 'keyup' && e.code !== 'Enter') {
       return
     }
     if (!todoValue || editTodoIndex != -1) {
